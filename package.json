@@ -1,8 +1,8 @@
 {
   "name": "encom-tron-legacy",
-  "displayName": "Encom Tron Legacy/Ares/CLU Theme Pack",
+  "displayName": "Troning - Tron Legacy Theme Pack",
   "description": "A VSCode theme pack inspired by the Tron Legacy movie, featuring Encom, Ares, and CLU color themes.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "rubenzn",
   "icon": "screenshots/icon.png",
   "galleryBanner": {

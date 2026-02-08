@@ -4,6 +4,13 @@ All notable changes to the Encom Tron Legacy Theme Pack will be documented in th
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [0.0.2] - 2026-02-08
+
+### Changed
+- Updated extension icon/logo
+- Renamed package to "Troning" because its cooler
+- Updated display name to "Troning - Tron Legacy Theme Pack"
+
 ## [0.0.1] - 2026-02-08
 
 ### Added
