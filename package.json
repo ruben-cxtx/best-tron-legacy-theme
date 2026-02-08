@@ -2,12 +2,16 @@
   "name": "encom-tron-legacy",
   "displayName": "Troning - Tron Legacy Theme Pack",
   "description": "A VSCode theme pack inspired by the Tron Legacy movie, featuring Encom, Ares, and CLU color themes.",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "publisher": "rubenzn",
   "icon": "screenshots/icon.png",
   "galleryBanner": {
   "color": "#000000",
-  "theme": "dark"
+  "theme": "dark",
+  "sponsor": {
+    "name": "Buy me a coffee",
+    "url": "https://buymeacoffee.com/rubenzn"
+  }
 },
 
   "engines": {

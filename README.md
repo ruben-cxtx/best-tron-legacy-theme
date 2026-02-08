@@ -52,6 +52,14 @@ The aggressive CLU theme with prominent orange highlights representing the antag
 - Optimized for multiple programming languages
 - Enhanced readability with carefully selected contrast ratios
 
+## ☕ Support
+
+If you enjoy this theme and want to support its development, consider buying me a coffee!
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://buymeacoffee.com/rubenzn)
+
+Your support helps maintain and improve this theme, and also help me with future projects. Thank you!
+
 ## 🤝 Contributing
 
 Found a bug or have a suggestion? Feel free to open an issue or submit a pull request on [GitHub](https://github.com/ruben-cxtx/best-tron-legacy-theme).

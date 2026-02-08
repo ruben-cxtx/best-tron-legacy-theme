@@ -23,3 +23,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Optimized syntax highlighting for multiple programming languages
 - Enhanced readability with carefully selected contrast ratios
 - Dark theme optimizations for extended coding sessions
+
+## [1.0.0] - 2026-02-08
+
+## Added
+- Buy me a coffe section
+- Changed the to an official version
