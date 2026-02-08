@@ -1,0 +1,21 @@
+{
+  "name": "encom-tron-legacy",
+  "displayName": "Encom Tron Legacy",
+  "description": "Deep void Encom interface with Ice Blue accents.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.109.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Encom Tron Legacy",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Encom Tron Legacy-color-theme.json"
+      }
+    ]
+  }
+}
