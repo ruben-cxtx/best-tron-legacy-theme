@@ -1,0 +1,135 @@
+{
+  "name": "CLU Tron Legacy",
+  "type": "dark",
+  "colors": {
+
+    "editor.background": "#0A0703",
+    "editor.foreground": "#FFDB9E",
+    "sideBar.background": "#050301",
+    "sideBar.border": "#FFA50022",
+    "activityBar.background": "#050301",
+    "activityBar.foreground": "#FFDB9E",
+    "tab.activeBorder": "#FFA500",
+    "statusBar.background": "#0A0703",
+    "statusBar.foreground": "#FFDB9E",
+    "editorIndentGuide.activeBackground1": "#FFA50044",
+    "editorIndentGuide.background1": "#FFA50011",
+
+
+    "editorCursor.foreground": "#FFA500",
+    "editorLineNumber.foreground": "#7A5C3E",
+    "editorLineNumber.activeForeground": "#FFA500",
+    "editor.selectionBackground": "#FFA50033",
+    "editor.selectionHighlightBackground": "#FFA5001A",
+    "editor.wordHighlightBackground": "#FFA5001A",
+    "editor.wordHighlightStrongBackground": "#FFA50033",
+    
+
+    "icon.foreground": "#FFA500",
+    "list.focusAndSelectionOutline": "#FFA50033",
+    
+
+    "list.activeSelectionIconForeground": "#FFA500",
+    "list.inactiveSelectionIconForeground": "#FFA500",
+    "list.focusBackground": "#1A1208",
+    "list.activeSelectionBackground": "#FFA50033",
+    "list.inactiveSelectionBackground": "#FFA5001A",
+    "list.hoverBackground": "#FFA5001A",
+
+
+    "terminal.background": "#0A0703",
+"terminal.foreground": "#FFDB9E",
+"terminalCursor.foreground": "#FF9500",
+
+"terminal.ansiBlack": "#1A120A",
+
+"terminal.ansiRed": "#FF6600",        
+"terminal.ansiGreen": "#FF8C1A",      
+"terminal.ansiYellow": "#FFCC00",     
+"terminal.ansiBlue": "#FF9500",       
+"terminal.ansiMagenta": "#CC5500",    
+"terminal.ansiCyan": "#804000",       
+"terminal.ansiWhite": "#FFDB9E",
+
+"terminal.ansiBrightRed": "#FF7A1A",
+"terminal.ansiBrightYellow": "#FFE08A",
+"terminal.ansiBrightWhite": "#FFFFFF"
+
+  },
+  "tokenColors": [
+    {
+      "name": "Comments",
+      "scope": ["comment", "punctuation.definition.comment"],
+      "settings": { "foreground": "#7A5C3E", "fontStyle": "italic" }
+    },
+    {
+      "name": "Keywords & Storage",
+      "scope": ["keyword", "storage.type", "storage.modifier", "keyword.control"],
+      "settings": { "foreground": "#FFB84D" } 
+    },
+    {
+      "name": "Special Keywords",
+      "scope": [
+        "keyword.control.import",
+        "keyword.control.export",
+        "keyword.control.from",
+        "keyword.other.important"
+      ],
+      "settings": { "foreground": "#FF9500" }
+    },
+    {
+      "name": "Functions - Bright Amber",
+      "scope": [
+        "entity.name.function", 
+        "support.function", 
+        "meta.function-call",
+        "variable.function"
+      ],
+      "settings": { "foreground": "#FFA500" }
+    },
+    {
+      "name": "Variables",
+      "scope": ["variable", "variable.parameter", "support.variable"],
+      "settings": { "foreground": "#FFDB9E" }
+    },
+    {
+      "name": "Strings",
+      "scope": ["string", "punctuation.definition.string"],
+      "settings": { "foreground": "#FFFFFF" }
+    },
+    {
+      "name": "Constants & Numbers",
+      "scope": ["constant.numeric", "constant.language", "support.constant"],
+      "settings": { "foreground": "#FFCC00" }
+    },
+    {
+      "name": "Tags (HTML/XML)",
+      "scope": ["entity.name.tag", "punctuation.definition.tag"],
+      "settings": { "foreground": "#FF9500" }
+    },
+    {
+      "name": "Attributes",
+      "scope": ["entity.other.attribute-name"],
+      "settings": { "foreground": "#FFDB9E", "fontStyle": "italic" }
+    },
+    {
+      "name": "Classes & Types",
+      "scope": ["entity.name.type", "entity.name.class", "support.class"],
+      "settings": { "foreground": "#FFCC00" }
+    },
+    {
+      "name": "JSON Keys",
+      "scope": "support.type.property-name.json",
+      "settings": { "foreground": "#FFB84D" }
+    },
+    {
+      "name": "Decorators & Annotations",
+      "scope": [
+        "meta.decorator",
+        "punctuation.decorator",
+        "storage.type.annotation"
+      ],
+      "settings": { "foreground": "#FF9500", "fontStyle": "italic" }
+    }
+  ]
+}

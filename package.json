@@ -1,20 +1,56 @@
 {
   "name": "encom-tron-legacy",
-  "displayName": "Encom Tron Legacy",
-  "description": "Deep void Encom interface with Ice Blue accents.",
+  "displayName": "Encom Tron Legacy/Ares/CLU Theme Pack",
+  "description": "A VSCode theme pack inspired by the Tron Legacy movie, featuring Encom, Ares, and CLU color themes.",
   "version": "0.0.1",
+  "publisher": "rubenzn",
+  "icon": "screenshots/icon.png",
   "engines": {
     "vscode": "^1.109.0"
   },
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "theme",
+    "tron",
+    "tron legacy",
+    "dark theme",
+    "blue",
+    "orange",
+    "neon",
+    "cyberpunk",
+    "encom",
+    "ares",
+    "clu",
+    "movie",
+    "sci-fi"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruben-cxtx/best-tron-legacy-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ruben-cxtx/best-tron-legacy-theme/issues"
+  },
+  "homepage": "https://github.com/ruben-cxtx/best-tron-legacy-theme#readme",
+  "license": "MIT",
   "contributes": {
     "themes": [
       {
-        "label": "Encom Tron Legacy",
+        "label": "Tron Legacy - Encom",
         "uiTheme": "vs-dark",
-        "path": "./themes/Encom Tron Legacy-color-theme.json"
+        "path": "./themes/encom-tron-legacy-color-theme.json"
+      },
+      {
+        "label": "Tron - Ares",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ares-tron-legacy-theme.json"
+      },
+      {
+        "label": "Tron Legacy - CLU",
+        "uiTheme": "vs-dark",
+        "path": "./themes/clu-tron-legacy-theme.json"
       }
     ]
   }

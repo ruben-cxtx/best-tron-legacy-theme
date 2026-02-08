@@ -1,0 +1,135 @@
+{
+  "name": "Ares Tron Legacy",
+  "type": "dark",
+  "colors": {
+
+    "editor.background": "#110000",
+    "editor.foreground": "#FFB3B3",
+    "sideBar.background": "#0A0000",
+    "sideBar.border": "#FF002222",
+    "activityBar.background": "#0A0000",
+    "activityBar.foreground": "#FFB3B3",
+    "tab.activeBorder": "#FF0022",
+    "statusBar.background": "#110000",
+    "statusBar.foreground": "#FFB3B3",
+    "editorIndentGuide.activeBackground1": "#FF002244",
+    "editorIndentGuide.background1": "#FF002211",
+
+
+    "editorCursor.foreground": "#FF0022",
+    "editorLineNumber.foreground": "#6B2020",
+    "editorLineNumber.activeForeground": "#FF0022",
+    "editor.selectionBackground": "#FF002233",
+    "editor.selectionHighlightBackground": "#FF00221A",
+    "editor.wordHighlightBackground": "#FF00221A",
+    "editor.wordHighlightStrongBackground": "#FF002233",
+    
+
+    "icon.foreground": "#FF0022",
+    "list.focusAndSelectionOutline": "#FF002233",
+    
+
+    "list.activeSelectionIconForeground": "#FF0022",
+    "list.inactiveSelectionIconForeground": "#FF0022",
+    "list.focusBackground": "#2A0606",
+    "list.activeSelectionBackground": "#FF002233",
+    "list.inactiveSelectionBackground": "#FF00221A",
+    "list.hoverBackground": "#FF00221A",
+
+
+    "terminal.background": "#110000",
+"terminal.foreground": "#FFD6D6",
+"terminalCursor.foreground": "#FF0022",
+
+"terminal.ansiBlack": "#1A0000",
+
+"terminal.ansiRed": "#FF0022",        
+"terminal.ansiGreen": "#FF5A5A",      
+"terminal.ansiYellow": "#FFD400",    
+"terminal.ansiBlue": "#FF6A3D",       
+"terminal.ansiMagenta": "#8B1E2D",    
+"terminal.ansiCyan": "#5A141A",       
+"terminal.ansiWhite": "#FFD6D6",
+
+"terminal.ansiBrightRed": "#FF3355",
+"terminal.ansiBrightYellow": "#FFE066",
+"terminal.ansiBrightWhite": "#FFFFFF"
+
+  },
+  "tokenColors": [
+    {
+      "name": "Comments",
+      "scope": ["comment", "punctuation.definition.comment"],
+      "settings": { "foreground": "#6B2020", "fontStyle": "italic" }
+    },
+    {
+      "name": "Keywords & Storage",
+      "scope": ["keyword", "storage.type", "storage.modifier", "keyword.control"],
+      "settings": { "foreground": "#FF5A5A" } 
+    },
+    {
+      "name": "Special Keywords",
+      "scope": [
+        "keyword.control.import",
+        "keyword.control.export",
+        "keyword.control.from",
+        "keyword.other.important"
+      ],
+      "settings": { "foreground": "#FF4D6D" }
+    },
+    {
+      "name": "Functions - Core Red",
+      "scope": [
+        "entity.name.function", 
+        "support.function", 
+        "meta.function-call",
+        "variable.function"
+      ],
+      "settings": { "foreground": "#FF0022" }
+    },
+    {
+      "name": "Variables",
+      "scope": ["variable", "variable.parameter", "support.variable"],
+      "settings": { "foreground": "#FFB3B3" }
+    },
+    {
+      "name": "Strings",
+      "scope": ["string", "punctuation.definition.string"],
+      "settings": { "foreground": "#FFFFFF" }
+    },
+    {
+      "name": "Constants & Numbers",
+      "scope": ["constant.numeric", "constant.language", "support.constant"],
+      "settings": { "foreground": "#FFD400" }
+    },
+    {
+      "name": "Tags (HTML/XML)",
+      "scope": ["entity.name.tag", "punctuation.definition.tag"],
+      "settings": { "foreground": "#FF4D6D" }
+    },
+    {
+      "name": "Attributes",
+      "scope": ["entity.other.attribute-name"],
+      "settings": { "foreground": "#FFB3B3", "fontStyle": "italic" }
+    },
+    {
+      "name": "Classes & Types",
+      "scope": ["entity.name.type", "entity.name.class", "support.class"],
+      "settings": { "foreground": "#FF784F", "fontStyle": "bold" }
+    },
+    {
+      "name": "JSON Keys",
+      "scope": "support.type.property-name.json",
+      "settings": { "foreground": "#FF5A5A" }
+    },
+    {
+      "name": "Decorators & Annotations",
+      "scope": [
+        "meta.decorator",
+        "punctuation.decorator",
+        "storage.type.annotation"
+      ],
+      "settings": { "foreground": "#FF4D6D", "fontStyle": "italic" }
+    }
+  ]
+}
