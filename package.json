@@ -5,6 +5,11 @@
   "version": "0.0.1",
   "publisher": "rubenzn",
   "icon": "screenshots/icon.png",
+  "galleryBanner": {
+  "color": "#000000",
+  "theme": "dark"
+},
+
   "engines": {
     "vscode": "^1.109.0"
   },
