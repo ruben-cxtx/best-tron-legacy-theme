@@ -2,7 +2,7 @@
   "name": "encom-tron-legacy",
   "displayName": "Troning - Tron Legacy Theme Pack",
   "description": "A VS Code theme pack inspired by the Tron universe, tuned for full-stack, AI, backend, and frontend development.",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "publisher": "rubenzn",
   "icon": "screenshots/icon.png",
   "galleryBanner": {
@@ -13,7 +13,6 @@
     "name": "Buy me a coffee",
     "url": "https://buymeacoffee.com/rubenzn"
   },
-
   "engines": {
     "vscode": "^1.109.0"
   },
