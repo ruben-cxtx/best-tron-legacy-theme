@@ -1,0 +1,38 @@
+---
+title: Troning MDX Lab
+status: draft
+tags:
+  - theme
+  - mdx
+  - nextjs
+---
+
+import { ProgramPanel } from "./theme-lab";
+
+# Troning MDX Lab
+
+This file mixes **Markdown**, JSX, imports, frontmatter, and fenced code. It is the fastest way to see whether a theme works for modern docs-heavy React projects.
+
+<ProgramPanel data-mdx-preview />
+
+## Checklist
+
+- [x] Headings should glow without shouting.
+- [x] Links should look clickable: [Open the Grid](https://example.com/grid).
+- [ ] Tables, quotes, and code fences should remain readable.
+
+> Bio-digital systems need contrast, hierarchy, and a little restraint.
+
+| Surface | Token | Expected Feel |
+| --- | --- | --- |
+| JSX | `ProgramPanel` | component signal |
+| Markdown | `inline code` | green terminal signal |
+| Frontmatter | `status: draft` | warm metadata |
+
+```tsx
+const route = "/api/programs";
+
+export async function GET() {
+  return Response.json({ route, ready: true });
+}
+```

@@ -48,12 +48,25 @@
     "editorWhitespace.foreground": "#FF2D452E",
     "editorCodeLens.foreground": "#8E3D48",
     "editorError.foreground": "#FF2D45",
+    "editorError.border": "#FF2D454D",
+    "editorError.background": "#FF2D4514",
     "editorWarning.foreground": "#FFE066",
+    "editorWarning.border": "#FFE0664D",
+    "editorWarning.background": "#FFE06614",
     "editorInfo.foreground": "#FF2D45",
+    "editorInfo.border": "#FF2D454D",
+    "editorInfo.background": "#FF2D4514",
     "editorHint.foreground": "#FF8F70",
+    "editorHint.border": "#FF8F704D",
     "editorGutter.addedBackground": "#FF8F70",
     "editorGutter.modifiedBackground": "#FF2D45",
     "editorGutter.deletedBackground": "#FF2D45",
+    "editorOverviewRuler.addedForeground": "#FF8F70BF",
+    "editorOverviewRuler.modifiedForeground": "#FF4D6DBF",
+    "editorOverviewRuler.deletedForeground": "#FF2D45BF",
+    "editorOverviewRuler.errorForeground": "#FF2D45",
+    "editorOverviewRuler.warningForeground": "#FFE066",
+    "editorOverviewRuler.infoForeground": "#FF2D45",
     "activityBar.background": "#080102",
     "activityBar.foreground": "#FFE4E6",
     "activityBar.inactiveForeground": "#D08B92B8",
@@ -161,6 +174,16 @@
     "peekViewTitleDescription.foreground": "#D08B92",
     "diffEditor.insertedTextBackground": "#FFD16629",
     "diffEditor.removedTextBackground": "#FF2D452E",
+    "diffEditor.insertedLineBackground": "#FF8F7017",
+    "diffEditor.removedLineBackground": "#FF2D451A",
+    "diffEditor.diagonalFill": "#FF2D453D",
+    "merge.currentHeaderBackground": "#FF2D453D",
+    "merge.currentContentBackground": "#FF2D451F",
+    "merge.incomingHeaderBackground": "#FF8F703D",
+    "merge.incomingContentBackground": "#FF8F701F",
+    "merge.border": "#FF4D6D5C",
+    "merge.commonContentBackground": "#2C0C1266",
+    "merge.commonHeaderBackground": "#2C0C12B3",
     "gitDecoration.addedResourceForeground": "#FF8F70",
     "gitDecoration.modifiedResourceForeground": "#FF4D6D",
     "gitDecoration.deletedResourceForeground": "#FF2D45",
@@ -196,6 +219,62 @@
     "debugIcon.stepIntoForeground": "#FF2D45",
     "debugIcon.stepOutForeground": "#FF2D45",
     "debugIcon.continueForeground": "#FF8F70",
+    "testing.iconErrored": "#FF2D45",
+    "testing.iconFailed": "#FF2D45",
+    "testing.iconPassed": "#FF8F70",
+    "testing.iconQueued": "#D08B92",
+    "testing.iconSkipped": "#8E3D48",
+    "testing.iconUnset": "#D08B92",
+    "testing.iconRunning": "#FF4D6D",
+    "testing.peekBorder": "#FF2D45",
+    "testing.peekHeaderBackground": "#1A070A",
+    "testing.message.error.decorationForeground": "#FF2D45",
+    "testing.message.error.lineBackground": "#FF2D4514",
+    "testing.message.info.decorationForeground": "#FF2D45",
+    "testing.message.info.lineBackground": "#FF2D4514",
+    "notebook.editorBackground": "#140507",
+    "notebook.cellBorderColor": "#FF2D452E",
+    "notebook.cellHoverBackground": "#FF2D4514",
+    "notebook.focusedCellBorder": "#FF4D6D",
+    "notebook.focusedEditorBorder": "#FF4D6D",
+    "notebook.inactiveFocusedCellBorder": "#FF2D4573",
+    "notebook.cellInsertionIndicator": "#FF4D6D",
+    "notebookScrollbarSlider.background": "#FF2D4538",
+    "notebookScrollbarSlider.hoverBackground": "#FF2D4557",
+    "notebookScrollbarSlider.activeBackground": "#FF4D6D75",
+    "symbolIcon.arrayForeground": "#FFD166",
+    "symbolIcon.booleanForeground": "#FF9A62",
+    "symbolIcon.classForeground": "#FFE066",
+    "symbolIcon.colorForeground": "#FF4D6D",
+    "symbolIcon.constantForeground": "#FF9A62",
+    "symbolIcon.constructorForeground": "#FFE066",
+    "symbolIcon.enumeratorForeground": "#FFE066",
+    "symbolIcon.enumeratorMemberForeground": "#FF9A62",
+    "symbolIcon.eventForeground": "#FF2D45",
+    "symbolIcon.fieldForeground": "#FFC8CD",
+    "symbolIcon.fileForeground": "#FFE4E6",
+    "symbolIcon.folderForeground": "#FF2D45",
+    "symbolIcon.functionForeground": "#FF4D6D",
+    "symbolIcon.interfaceForeground": "#FFE066",
+    "symbolIcon.keyForeground": "#FFC8CD",
+    "symbolIcon.keywordForeground": "#FF6A3D",
+    "symbolIcon.methodForeground": "#FF4D6D",
+    "symbolIcon.moduleForeground": "#FF2D45",
+    "symbolIcon.namespaceForeground": "#FF2D45",
+    "symbolIcon.nullForeground": "#FF9A62",
+    "symbolIcon.numberForeground": "#FFE066",
+    "symbolIcon.objectForeground": "#FFC8CD",
+    "symbolIcon.operatorForeground": "#FFC8CD",
+    "symbolIcon.packageForeground": "#FF2D45",
+    "symbolIcon.propertyForeground": "#FFC8CD",
+    "symbolIcon.referenceForeground": "#FF6A3D",
+    "symbolIcon.snippetForeground": "#FFD166",
+    "symbolIcon.stringForeground": "#FFD166",
+    "symbolIcon.structForeground": "#FFE066",
+    "symbolIcon.textForeground": "#FFE4E6",
+    "symbolIcon.typeParameterForeground": "#FF9A62",
+    "symbolIcon.unitForeground": "#FFE066",
+    "symbolIcon.variableForeground": "#FFE4E6",
     "charts.foreground": "#FFE4E6",
     "charts.lines": "#8E3D48",
     "charts.red": "#FF2D45",
@@ -276,10 +355,43 @@
         "meta.function-call",
         "variable.function",
         "meta.method-call",
-        "entity.name.function.member"
+        "entity.name.function.member",
+        "support.function.console",
+        "support.function.dom",
+        "support.function.node"
       ],
       "settings": {
         "foreground": "#FF4D6D"
+      }
+    },
+    {
+      "name": "React and framework hooks",
+      "scope": [
+        "support.function.react",
+        "support.function.hook",
+        "entity.name.function.react",
+        "variable.other.readwrite.alias.js",
+        "variable.other.readwrite.alias.ts",
+        "meta.import variable.other.readwrite"
+      ],
+      "settings": {
+        "foreground": "#FF9A62"
+      }
+    },
+    {
+      "name": "Next.js, React Server Components, and directives",
+      "scope": [
+        "string.quoted.single.js meta.directive",
+        "string.quoted.double.js meta.directive",
+        "string.quoted.single.ts meta.directive",
+        "string.quoted.double.ts meta.directive",
+        "meta.directive",
+        "keyword.other.directive",
+        "support.constant.nextjs",
+        "support.constant.astro"
+      ],
+      "settings": {
+        "foreground": "#FFE066"
       }
     },
     {
@@ -290,7 +402,9 @@
         "entity.name.tag support.class.component",
         "variable.other.object.js",
         "variable.other.object.ts",
-        "entity.name.function.constructor"
+        "entity.name.function.constructor",
+        "entity.name.tag.jsx support.class.component",
+        "entity.name.tag.tsx support.class.component"
       ],
       "settings": {
         "foreground": "#FF9A62"
@@ -377,14 +491,37 @@
         "entity.name.class",
         "entity.name.struct",
         "entity.name.enum",
+        "entity.name.type.alias",
+        "entity.name.type.module",
         "support.class",
         "support.type",
         "support.type.primitive",
         "storage.type.interface",
-        "entity.name.type.interface"
+        "entity.name.type.interface",
+        "entity.name.type.ts",
+        "entity.name.type.tsx",
+        "support.type.builtin.ts",
+        "support.type.builtin.tsx"
       ],
       "settings": {
         "foreground": "#FFE066"
+      }
+    },
+    {
+      "name": "TypeScript generics and constraints",
+      "scope": [
+        "entity.name.type.parameter",
+        "meta.type.parameters",
+        "meta.type.parameters.ts",
+        "meta.type.parameters.tsx",
+        "punctuation.definition.typeparameters",
+        "keyword.operator.type.annotation",
+        "keyword.operator.expression.keyof",
+        "keyword.operator.expression.infer",
+        "keyword.operator.expression.is"
+      ],
+      "settings": {
+        "foreground": "#FF9A62"
       }
     },
     {
@@ -432,6 +569,22 @@
       }
     },
     {
+      "name": "JSX text and embedded expressions",
+      "scope": [
+        "meta.jsx.children",
+        "meta.jsx.children.js",
+        "meta.jsx.children.tsx",
+        "meta.embedded.expression",
+        "punctuation.section.embedded.begin.jsx",
+        "punctuation.section.embedded.end.jsx",
+        "punctuation.section.embedded.begin.tsx",
+        "punctuation.section.embedded.end.tsx"
+      ],
+      "settings": {
+        "foreground": "#FFC8CD"
+      }
+    },
+    {
       "name": "JSX, Astro, HTML, and Tailwind attributes",
       "scope": [
         "entity.other.attribute-name",
@@ -445,6 +598,21 @@
       "settings": {
         "foreground": "#FFE066",
         "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Tailwind utility class strings",
+      "scope": [
+        "meta.attribute.class.html string",
+        "meta.attribute.class.jsx string",
+        "meta.attribute.class.tsx string",
+        "meta.attribute.class.astro string",
+        "string.quoted.double.html meta.class",
+        "string.quoted.single.html meta.class",
+        "support.constant.tailwind"
+      ],
+      "settings": {
+        "foreground": "#FFD166"
       }
     },
     {
@@ -484,6 +652,19 @@
       }
     },
     {
+      "name": "MDX imports and JSX islands",
+      "scope": [
+        "source.mdx meta.import",
+        "source.mdx entity.name.tag",
+        "source.mdx entity.other.attribute-name",
+        "source.mdx meta.jsx.children",
+        "source.mdx markup.inline.raw"
+      ],
+      "settings": {
+        "foreground": "#FF4D6D"
+      }
+    },
+    {
       "name": "SQL keywords and clauses",
       "scope": [
         "keyword.other.DML.sql",
@@ -516,10 +697,29 @@
         "variable.language.special.self.python",
         "support.function.builtin.python",
         "support.type.python",
-        "variable.parameter.function.language.special.self.python"
+        "variable.parameter.function.language.special.self.python",
+        "support.variable.magic.python",
+        "support.function.magic.python",
+        "entity.name.function.magic.python"
       ],
       "settings": {
         "foreground": "#FF9A62"
+      }
+    },
+    {
+      "name": "Python decorators, type hints, and f-strings",
+      "scope": [
+        "meta.function.decorator.python",
+        "entity.name.function.decorator.python",
+        "storage.type.function.python",
+        "support.type.python",
+        "meta.function.parameters.python",
+        "constant.character.format.placeholder.other.python",
+        "punctuation.definition.interpolation.begin.python",
+        "punctuation.definition.interpolation.end.python"
+      ],
+      "settings": {
+        "foreground": "#FFE066"
       }
     },
     {
@@ -688,6 +888,7 @@
       "name": "Markdown frontmatter",
       "scope": [
         "meta.frontmatter.markdown",
+        "meta.frontmatter.mdx",
         "punctuation.definition.metadata.markdown",
         "punctuation.section.frontmatter.begin",
         "punctuation.section.frontmatter.end"

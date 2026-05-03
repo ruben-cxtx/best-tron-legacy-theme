@@ -1,6 +1,6 @@
 # Troning - Tron Legacy Theme Pack
 
-A VS Code theme pack inspired by the digital world of Tron, rebuilt for everyday full-stack programming. Troning now includes four dark flavors with semantic highlighting, deeper workbench coverage, tuned terminal ANSI colors, and syntax rules for frontend, backend, infrastructure, data, and AI/Python work.
+A VS Code theme pack inspired by the digital world of Tron, rebuilt for everyday full-stack programming. Troning now includes five dark flavors with semantic highlighting, deeper workbench coverage, tuned terminal ANSI colors, and syntax rules for frontend, backend, infrastructure, data, and AI/Python work.
 
 ## Themes Included
 
@@ -8,6 +8,9 @@ A VS Code theme pack inspired by the digital world of Tron, rebuilt for everyday
 The flagship flavor. Deep blue-black UI, cyan circuitry, cool ice foregrounds, and careful amber/green signal accents for readable React, Next.js, Node, NestJS, Astro, Tailwind, Markdown, SQL, YAML, Docker, Kubernetes, CI/CD, and Python code.
 
 ![Encom Theme Screenshot](./screenshots/encom-theme.png)
+
+### Tron Legacy - Encom Clean
+The same Encom palette without italic styling, built for people who prefer a quieter coding surface while keeping the cyan, purple keyword, amber, and green signal language.
 
 ### Tron - Ares
 Red/orange program energy for a hotter Grid look, with softer foregrounds so it stays usable during long coding sessions.
@@ -44,18 +47,20 @@ An arcade-inspired retro Tron flavor with blue neon, electric green signals, and
 1. Press `Ctrl+K Ctrl+T` (or `Cmd+K Cmd+T` on macOS)
 2. Select from:
    - **Tron Legacy - Encom**
+   - **Tron Legacy - Encom Clean**
    - **Tron - Ares**
    - **Tron Legacy - CLU**
    - **Tron - Retro Grid**
 
 ## Features
 
-- Four distinct dark themes with Tron-inspired palettes
+- Five distinct dark themes with Tron-inspired palettes
 - Semantic highlighting enabled for modern language servers
-- Broad TextMate scope coverage for JS, TS, React, Next.js, Node, NestJS, Astro, Tailwind, HTML, CSS, SQL, Markdown, YAML, Docker, Kubernetes, GitLab CI, shell, and Python
-- Rich workbench styling for tabs, panels, lists, settings, notifications, debug controls, Git decorations, minimap markers, breadcrumbs, and peek views
+- Broad TextMate scope coverage for JS, TS, React, Next.js, MDX, Node, NestJS, Astro, Tailwind, HTML, CSS, SQL, Markdown, YAML, Docker, Kubernetes, GitLab CI, shell, and Python
+- Rich workbench styling for tabs, panels, lists, settings, notifications, diagnostics, testing, notebooks, symbol icons, debug controls, Git decorations, merge/diff views, minimap markers, breadcrumbs, and peek views
 - Terminal ANSI palettes matched to each flavor
 - Generator-backed theme files with a contrast check for token colors
+- Theme lab examples for TSX, MDX, Markdown, Astro, NestJS, Python, SQL, YAML, Docker, Kubernetes, and GitLab CI
 
 ## Development
 
@@ -64,7 +69,10 @@ Theme JSON files are generated from `scripts/build-themes.js`.
 ```sh
 npm run build
 npm run check
+npm run package
 ```
+
+The `examples/` folder contains fixture files for visual testing when tuning token colors across React, MDX, Markdown, Astro, NestJS, Python, SQL, YAML, Docker, Kubernetes, and CI/CD. GitHub Actions validate generated themes on pushes and pull requests, and the publish workflow can publish tagged releases when `VSCE_PAT` is configured as a repository secret.
 
 ## Support
 

@@ -1,0 +1,31 @@
+stages:
+  - test
+  - package
+  - deploy
+
+variables:
+  NODE_VERSION: "22"
+
+test:theme:
+  stage: test
+  image: node:${NODE_VERSION}
+  script:
+    - npm ci
+    - npm run check
+
+package:vsix:
+  stage: package
+  image: node:${NODE_VERSION}
+  script:
+    - npx @vscode/vsce package
+  artifacts:
+    paths:
+      - "*.vsix"
+
+deploy:marketplace:
+  stage: deploy
+  image: node:${NODE_VERSION}
+  rules:
+    - if: '$CI_COMMIT_TAG'
+  script:
+    - npx @vscode/vsce publish -p "$VSCE_PAT"

@@ -1,0 +1,27 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  theme:
+    name: Theme package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check generated themes
+        run: npm run check
+
+      - name: Validate package
+        run: npx @vscode/vsce package --no-dependencies

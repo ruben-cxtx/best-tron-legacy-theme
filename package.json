@@ -2,7 +2,7 @@
   "name": "encom-tron-legacy",
   "displayName": "Troning - Tron Legacy Theme Pack",
   "description": "A VS Code theme pack inspired by the Tron universe, tuned for full-stack, AI, backend, and frontend development.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "publisher": "rubenzn",
   "icon": "screenshots/icon.png",
   "galleryBanner": {
@@ -51,7 +51,9 @@
   ],
   "scripts": {
     "build": "node scripts/build-themes.js",
-    "check": "node scripts/build-themes.js --check"
+    "check": "node scripts/build-themes.js --check",
+    "package": "npx @vscode/vsce package",
+    "publish:marketplace": "npx @vscode/vsce publish"
   },
   "repository": {
     "type": "git",
@@ -68,6 +70,11 @@
         "label": "Tron Legacy - Encom",
         "uiTheme": "vs-dark",
         "path": "./themes/encom-tron-legacy-color-theme.json"
+      },
+      {
+        "label": "Tron Legacy - Encom Clean",
+        "uiTheme": "vs-dark",
+        "path": "./themes/encom-tron-clean-color-theme.json"
       },
       {
         "label": "Tron - Ares",

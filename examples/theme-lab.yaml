@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: encom-grid-api
+  labels:
+    app.kubernetes.io/name: encom-grid-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: encom-grid-api
+  template:
+    metadata:
+      labels:
+        app: encom-grid-api
+    spec:
+      containers:
+        - name: api
+          image: ghcr.io/ruben-cxtx/encom-grid-api:1.2.0
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: grid-secrets
+                  key: database-url

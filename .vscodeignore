@@ -1,4 +1,7 @@
 .vscode/**
 .vscode-test/**
+.github/**
+examples/**
+.gitlab-ci.yml
 .gitignore
 vsc-extension-quickstart.md

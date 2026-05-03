@@ -1,0 +1,29 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  marketplace:
+    name: VS Code Marketplace
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check generated themes
+        run: npm run check
+
+      - name: Publish extension
+        run: npx @vscode/vsce publish --no-dependencies -p "$VSCE_PAT"
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}

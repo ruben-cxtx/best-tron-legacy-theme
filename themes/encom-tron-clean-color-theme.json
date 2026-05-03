@@ -1,5 +1,5 @@
 {
-  "name": "Encom Tron Legacy",
+  "name": "Encom Tron Clean",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {
@@ -291,8 +291,7 @@
         "punctuation.definition.comment"
       ],
       "settings": {
-        "foreground": "#6DA9B8",
-        "fontStyle": "italic"
+        "foreground": "#6DA9B8"
       }
     },
     {
@@ -302,8 +301,7 @@
         "comment.block.documentation punctuation.definition.comment"
       ],
       "settings": {
-        "foreground": "#A9E6F0",
-        "fontStyle": "italic"
+        "foreground": "#A9E6F0"
       }
     },
     {
@@ -550,8 +548,7 @@
         "meta.function.decorator"
       ],
       "settings": {
-        "foreground": "#FF6E7A",
-        "fontStyle": "italic"
+        "foreground": "#FF6E7A"
       }
     },
     {
@@ -596,8 +593,7 @@
         "support.type.property-name.css"
       ],
       "settings": {
-        "foreground": "#FFC777",
-        "fontStyle": "italic"
+        "foreground": "#FFC777"
       }
     },
     {
@@ -809,8 +805,7 @@
         "markup.italic"
       ],
       "settings": {
-        "foreground": "#A9E6F0",
-        "fontStyle": "italic"
+        "foreground": "#A9E6F0"
       }
     },
     {
@@ -963,23 +958,20 @@
     "keyword": "#B892FF",
     "modifier": "#B892FF",
     "comment": {
-      "foreground": "#6DA9B8",
-      "italic": true
+      "foreground": "#6DA9B8"
     },
     "string": "#8DFFB3",
     "number": "#FFC777",
     "regexp": "#FF6E7A",
     "operator": "#A9E6F0",
     "decorator": {
-      "foreground": "#FF6E7A",
-      "italic": true
+      "foreground": "#FF6E7A"
     },
     "*.static": {
       "foreground": "#9BE8FF"
     },
     "*.async": {
-      "foreground": "#00F5FF",
-      "italic": true
+      "foreground": "#00F5FF"
     },
     "*.deprecated": {
       "foreground": "#3E7482",

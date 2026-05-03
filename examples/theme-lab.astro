@@ -1,0 +1,21 @@
+---
+const title = "Encom Portal";
+const links = ["Programs", "Telemetry", "Identity Discs"];
+---
+
+<main class="min-h-screen bg-slate-950 text-cyan-50">
+  <section class="mx-auto grid max-w-3xl gap-6 px-6 py-12">
+    <h1 class="text-3xl font-semibold text-cyan-200">{title}</h1>
+    <nav aria-label="Grid routes">
+      <ul class="flex gap-3">
+        {links.map((link) => (
+          <li>
+            <a class="text-amber-300 hover:text-cyan-200" href={`/${link.toLowerCase()}`}>
+              {link}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </section>
+</main>

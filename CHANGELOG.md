@@ -4,6 +4,19 @@ All notable changes to the Encom Tron Legacy Theme Pack will be documented in th
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [1.2.0] - 2026-05-03
+
+### Added
+- Added **Tron Legacy - Encom Clean**, a no-italic Encom variant for a calmer coding surface.
+- Added deeper React, Next.js, MDX, Tailwind, TypeScript, Python, notebook, diagnostic, test, symbol, merge, and diff color coverage.
+- Added theme lab fixtures for TSX, MDX, Markdown, Astro, NestJS, Python, SQL, YAML/Kubernetes, Docker, and GitLab CI.
+- Added GitHub Actions workflows for theme validation and Marketplace publishing from version tags or manual dispatch.
+- Added package scripts for VSIX packaging and Marketplace publishing.
+
+### Changed
+- Expanded Encom keyword support while keeping the Vira-like purple focused on keyword/modifier tokens.
+- Improved generated workbench colors for modern editor surfaces such as tests, notebooks, symbol icons, diagnostics, and merge views.
+
 ## [1.1.0] - 2026-05-03
 
 ### Added

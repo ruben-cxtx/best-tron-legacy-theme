@@ -50,6 +50,51 @@ const palettes = [
     }
   },
   {
+    file: "themes/encom-tron-clean-color-theme.json",
+    name: "Encom Tron Clean",
+    uiLabel: "Tron Legacy - Encom Clean",
+    noItalics: true,
+    bg: "#061016",
+    bgDeep: "#02090D",
+    bgSoft: "#0A1B24",
+    panel: "#07151C",
+    panelAlt: "#0D2330",
+    border: "#1D5364",
+    fg: "#D8FBFF",
+    fgSoft: "#A9E6F0",
+    muted: "#6DA9B8",
+    mutedDeep: "#3E7482",
+    accent: "#6FC3DF",
+    accentBright: "#00F5FF",
+    accentAlt: "#2D7DFF",
+    keyword: "#B892FF",
+    secondary: "#9BE8FF",
+    tertiary: "#8DFFB3",
+    success: "#8DFFB3",
+    warm: "#FFC777",
+    danger: "#FF6E7A",
+    dangerDeep: "#E04005",
+    badgeFg: "#001014",
+    ansi: {
+      black: "#061016",
+      red: "#FF6E7A",
+      green: "#8DFFB3",
+      yellow: "#FFC777",
+      blue: "#2D7DFF",
+      magenta: "#FF9F7A",
+      cyan: "#00F5FF",
+      white: "#D8FBFF",
+      brightBlack: "#3E7482",
+      brightRed: "#FF8B94",
+      brightGreen: "#B8FFD0",
+      brightYellow: "#FFE2A6",
+      brightBlue: "#75A7FF",
+      brightMagenta: "#FFC3A8",
+      brightCyan: "#9BFBFF",
+      brightWhite: "#FFFFFF"
+    }
+  },
+  {
     file: "themes/ares-tron-legacy-theme.json",
     name: "Ares Tron Legacy",
     uiLabel: "Tron - Ares",
@@ -236,12 +281,25 @@ function makeWorkbench(p) {
     "editorWhitespace.foreground": alpha(p.accent, 0.18),
     "editorCodeLens.foreground": p.mutedDeep,
     "editorError.foreground": p.danger,
+    "editorError.border": alpha(p.danger, 0.3),
+    "editorError.background": alpha(p.danger, 0.08),
     "editorWarning.foreground": p.warm,
+    "editorWarning.border": alpha(p.warm, 0.3),
+    "editorWarning.background": alpha(p.warm, 0.08),
     "editorInfo.foreground": p.accent,
+    "editorInfo.border": alpha(p.accent, 0.3),
+    "editorInfo.background": alpha(p.accent, 0.08),
     "editorHint.foreground": p.success,
+    "editorHint.border": alpha(p.success, 0.3),
     "editorGutter.addedBackground": p.success,
     "editorGutter.modifiedBackground": p.accent,
     "editorGutter.deletedBackground": p.danger,
+    "editorOverviewRuler.addedForeground": alpha(p.success, 0.75),
+    "editorOverviewRuler.modifiedForeground": alpha(p.accentBright, 0.75),
+    "editorOverviewRuler.deletedForeground": alpha(p.danger, 0.75),
+    "editorOverviewRuler.errorForeground": p.danger,
+    "editorOverviewRuler.warningForeground": p.warm,
+    "editorOverviewRuler.infoForeground": p.accent,
 
     "activityBar.background": p.bgDeep,
     "activityBar.foreground": p.fg,
@@ -362,6 +420,16 @@ function makeWorkbench(p) {
 
     "diffEditor.insertedTextBackground": alpha(p.tertiary, 0.16),
     "diffEditor.removedTextBackground": alpha(p.danger, 0.18),
+    "diffEditor.insertedLineBackground": alpha(p.success, 0.09),
+    "diffEditor.removedLineBackground": alpha(p.danger, 0.1),
+    "diffEditor.diagonalFill": alpha(p.accent, 0.24),
+    "merge.currentHeaderBackground": alpha(p.accent, 0.24),
+    "merge.currentContentBackground": alpha(p.accent, 0.12),
+    "merge.incomingHeaderBackground": alpha(p.success, 0.24),
+    "merge.incomingContentBackground": alpha(p.success, 0.12),
+    "merge.border": alpha(p.accentBright, 0.36),
+    "merge.commonContentBackground": alpha(p.panelAlt, 0.4),
+    "merge.commonHeaderBackground": alpha(p.panelAlt, 0.7),
     "gitDecoration.addedResourceForeground": p.success,
     "gitDecoration.modifiedResourceForeground": p.accentBright,
     "gitDecoration.deletedResourceForeground": p.danger,
@@ -400,6 +468,65 @@ function makeWorkbench(p) {
     "debugIcon.stepIntoForeground": p.accent,
     "debugIcon.stepOutForeground": p.accent,
     "debugIcon.continueForeground": p.success,
+
+    "testing.iconErrored": p.danger,
+    "testing.iconFailed": p.danger,
+    "testing.iconPassed": p.success,
+    "testing.iconQueued": p.muted,
+    "testing.iconSkipped": p.mutedDeep,
+    "testing.iconUnset": p.muted,
+    "testing.iconRunning": p.accentBright,
+    "testing.peekBorder": p.accent,
+    "testing.peekHeaderBackground": p.panel,
+    "testing.message.error.decorationForeground": p.danger,
+    "testing.message.error.lineBackground": alpha(p.danger, 0.08),
+    "testing.message.info.decorationForeground": p.accent,
+    "testing.message.info.lineBackground": alpha(p.accent, 0.08),
+
+    "notebook.editorBackground": p.bg,
+    "notebook.cellBorderColor": alpha(p.accent, 0.18),
+    "notebook.cellHoverBackground": alpha(p.accent, 0.08),
+    "notebook.focusedCellBorder": p.accentBright,
+    "notebook.focusedEditorBorder": p.accentBright,
+    "notebook.inactiveFocusedCellBorder": alpha(p.accent, 0.45),
+    "notebook.cellInsertionIndicator": p.accentBright,
+    "notebookScrollbarSlider.background": alpha(p.accent, 0.22),
+    "notebookScrollbarSlider.hoverBackground": alpha(p.accent, 0.34),
+    "notebookScrollbarSlider.activeBackground": alpha(p.accentBright, 0.46),
+
+    "symbolIcon.arrayForeground": p.tertiary,
+    "symbolIcon.booleanForeground": p.secondary,
+    "symbolIcon.classForeground": p.warm,
+    "symbolIcon.colorForeground": p.accentBright,
+    "symbolIcon.constantForeground": p.secondary,
+    "symbolIcon.constructorForeground": p.warm,
+    "symbolIcon.enumeratorForeground": p.warm,
+    "symbolIcon.enumeratorMemberForeground": p.secondary,
+    "symbolIcon.eventForeground": p.danger,
+    "symbolIcon.fieldForeground": p.fgSoft,
+    "symbolIcon.fileForeground": p.fg,
+    "symbolIcon.folderForeground": p.accent,
+    "symbolIcon.functionForeground": p.accentBright,
+    "symbolIcon.interfaceForeground": p.warm,
+    "symbolIcon.keyForeground": p.fgSoft,
+    "symbolIcon.keywordForeground": p.keyword || p.accentAlt,
+    "symbolIcon.methodForeground": p.accentBright,
+    "symbolIcon.moduleForeground": p.accent,
+    "symbolIcon.namespaceForeground": p.accent,
+    "symbolIcon.nullForeground": p.secondary,
+    "symbolIcon.numberForeground": p.warm,
+    "symbolIcon.objectForeground": p.fgSoft,
+    "symbolIcon.operatorForeground": p.fgSoft,
+    "symbolIcon.packageForeground": p.accent,
+    "symbolIcon.propertyForeground": p.fgSoft,
+    "symbolIcon.referenceForeground": p.accentAlt,
+    "symbolIcon.snippetForeground": p.tertiary,
+    "symbolIcon.stringForeground": p.tertiary,
+    "symbolIcon.structForeground": p.warm,
+    "symbolIcon.textForeground": p.fg,
+    "symbolIcon.typeParameterForeground": p.secondary,
+    "symbolIcon.unitForeground": p.warm,
+    "symbolIcon.variableForeground": p.fg,
 
     "charts.foreground": p.fg,
     "charts.lines": p.mutedDeep,
@@ -454,15 +581,38 @@ function makeTokenColors(p) {
       "meta.function-call",
       "variable.function",
       "meta.method-call",
-      "entity.name.function.member"
+      "entity.name.function.member",
+      "support.function.console",
+      "support.function.dom",
+      "support.function.node"
     ], p.accentBright),
+    rule("React and framework hooks", [
+      "support.function.react",
+      "support.function.hook",
+      "entity.name.function.react",
+      "variable.other.readwrite.alias.js",
+      "variable.other.readwrite.alias.ts",
+      "meta.import variable.other.readwrite"
+    ], p.secondary),
+    rule("Next.js, React Server Components, and directives", [
+      "string.quoted.single.js meta.directive",
+      "string.quoted.double.js meta.directive",
+      "string.quoted.single.ts meta.directive",
+      "string.quoted.double.ts meta.directive",
+      "meta.directive",
+      "keyword.other.directive",
+      "support.constant.nextjs",
+      "support.constant.astro"
+    ], p.warm),
     rule("React components and constructors", [
       "support.class.component",
       "entity.name.type.class.jsx",
       "entity.name.tag support.class.component",
       "variable.other.object.js",
       "variable.other.object.ts",
-      "entity.name.function.constructor"
+      "entity.name.function.constructor",
+      "entity.name.tag.jsx support.class.component",
+      "entity.name.tag.tsx support.class.component"
     ], p.secondary),
     rule("Variables and parameters", [
       "variable",
@@ -507,12 +657,29 @@ function makeTokenColors(p) {
       "entity.name.class",
       "entity.name.struct",
       "entity.name.enum",
+      "entity.name.type.alias",
+      "entity.name.type.module",
       "support.class",
       "support.type",
       "support.type.primitive",
       "storage.type.interface",
-      "entity.name.type.interface"
+      "entity.name.type.interface",
+      "entity.name.type.ts",
+      "entity.name.type.tsx",
+      "support.type.builtin.ts",
+      "support.type.builtin.tsx"
     ], p.warm),
+    rule("TypeScript generics and constraints", [
+      "entity.name.type.parameter",
+      "meta.type.parameters",
+      "meta.type.parameters.ts",
+      "meta.type.parameters.tsx",
+      "punctuation.definition.typeparameters",
+      "keyword.operator.type.annotation",
+      "keyword.operator.expression.keyof",
+      "keyword.operator.expression.infer",
+      "keyword.operator.expression.is"
+    ], p.secondary),
     rule("Object properties and JSON keys", [
       "variable.object.property",
       "variable.other.property",
@@ -538,6 +705,16 @@ function makeTokenColors(p) {
       "entity.name.tag.astro",
       "punctuation.definition.tag"
     ], p.accentBright),
+    rule("JSX text and embedded expressions", [
+      "meta.jsx.children",
+      "meta.jsx.children.js",
+      "meta.jsx.children.tsx",
+      "meta.embedded.expression",
+      "punctuation.section.embedded.begin.jsx",
+      "punctuation.section.embedded.end.jsx",
+      "punctuation.section.embedded.begin.tsx",
+      "punctuation.section.embedded.end.tsx"
+    ], p.fgSoft),
     rule("JSX, Astro, HTML, and Tailwind attributes", [
       "entity.other.attribute-name",
       "entity.other.attribute-name.class.css",
@@ -547,6 +724,15 @@ function makeTokenColors(p) {
       "entity.other.attribute-name.astro",
       "support.type.property-name.css"
     ], p.warm, "italic"),
+    rule("Tailwind utility class strings", [
+      "meta.attribute.class.html string",
+      "meta.attribute.class.jsx string",
+      "meta.attribute.class.tsx string",
+      "meta.attribute.class.astro string",
+      "string.quoted.double.html meta.class",
+      "string.quoted.single.html meta.class",
+      "support.constant.tailwind"
+    ], p.tertiary),
     rule("CSS selectors", [
       "entity.other.attribute-name.class.css",
       "entity.other.attribute-name.id.css",
@@ -565,6 +751,13 @@ function makeTokenColors(p) {
       "string.quoted.double.html",
       "string.quoted.single.html"
     ], p.tertiary),
+    rule("MDX imports and JSX islands", [
+      "source.mdx meta.import",
+      "source.mdx entity.name.tag",
+      "source.mdx entity.other.attribute-name",
+      "source.mdx meta.jsx.children",
+      "source.mdx markup.inline.raw"
+    ], p.accentBright),
     rule("SQL keywords and clauses", [
       "keyword.other.DML.sql",
       "keyword.other.ddl.sql",
@@ -583,8 +776,21 @@ function makeTokenColors(p) {
       "variable.language.special.self.python",
       "support.function.builtin.python",
       "support.type.python",
-      "variable.parameter.function.language.special.self.python"
+      "variable.parameter.function.language.special.self.python",
+      "support.variable.magic.python",
+      "support.function.magic.python",
+      "entity.name.function.magic.python"
     ], p.secondary),
+    rule("Python decorators, type hints, and f-strings", [
+      "meta.function.decorator.python",
+      "entity.name.function.decorator.python",
+      "storage.type.function.python",
+      "support.type.python",
+      "meta.function.parameters.python",
+      "constant.character.format.placeholder.other.python",
+      "punctuation.definition.interpolation.begin.python",
+      "punctuation.definition.interpolation.end.python"
+    ], p.warm),
     rule("Shell, Dockerfile, and CI directives", [
       "support.function.builtin.shell",
       "support.function.builtin.zsh",
@@ -662,6 +868,7 @@ function makeTokenColors(p) {
     ], p.accent),
     rule("Markdown frontmatter", [
       "meta.frontmatter.markdown",
+      "meta.frontmatter.mdx",
       "punctuation.definition.metadata.markdown",
       "punctuation.section.frontmatter.begin",
       "punctuation.section.frontmatter.end"
@@ -723,8 +930,28 @@ function makeSemanticTokenColors(p) {
   };
 }
 
+function removeItalicStyles(theme) {
+  for (const token of theme.tokenColors) {
+    const fontStyle = token.settings && token.settings.fontStyle;
+    if (!fontStyle) continue;
+    const next = fontStyle
+      .split(/\s+/)
+      .filter((style) => style && style !== "italic")
+      .join(" ");
+    if (next) {
+      token.settings.fontStyle = next;
+    } else {
+      delete token.settings.fontStyle;
+    }
+  }
+
+  for (const value of Object.values(theme.semanticTokenColors)) {
+    if (value && typeof value === "object" && value.italic) delete value.italic;
+  }
+}
+
 function themeFor(p) {
-  return {
+  const theme = {
     name: p.name,
     type: "dark",
     semanticHighlighting: true,
@@ -732,6 +959,8 @@ function themeFor(p) {
     tokenColors: makeTokenColors(p),
     semanticTokenColors: makeSemanticTokenColors(p)
   };
+  if (p.noItalics) removeItalicStyles(theme);
+  return theme;
 }
 
 function relativeLuminance(hex) {
