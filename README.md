@@ -5,7 +5,7 @@ A VS Code theme pack inspired by the digital world of Tron, rebuilt for everyday
 ## Themes Included
 
 ### Tron Legacy - Encom
-The flagship flavor. Deep blue-black UI, cyan circuitry, cool ice foregrounds, and careful amber/purple/green accents for readable React, Next.js, Node, NestJS, Astro, Tailwind, Markdown, SQL, YAML, Docker, Kubernetes, CI/CD, and Python code.
+The flagship flavor. Deep blue-black UI, cyan circuitry, cool ice foregrounds, and careful amber/green signal accents for readable React, Next.js, Node, NestJS, Astro, Tailwind, Markdown, SQL, YAML, Docker, Kubernetes, CI/CD, and Python code.
 
 ![Encom Theme Screenshot](./screenshots/encom-theme.png)
 
@@ -20,7 +20,7 @@ Golden-orange command surface inspired by CLU's world, with amber types, bright 
 ![CLU Theme Screenshot](./screenshots/clu-theme.png)
 
 ### Tron - Retro Grid
-An arcade-inspired retro Tron flavor with blue neon, magenta highlights, electric green signals, and warm yellow values.
+An arcade-inspired retro Tron flavor with blue neon, electric green signals, and warm amber values.
 
 ## Installation
 

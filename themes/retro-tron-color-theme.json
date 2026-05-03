@@ -13,6 +13,15 @@
     "errorForeground": "#FF3B6B",
     "icon.foreground": "#00A3FF",
     "sash.hoverBorder": "#00F0FF",
+    "textBlockQuote.background": "#0A1E3D66",
+    "textBlockQuote.border": "#00A3FF",
+    "textCodeBlock.background": "#0A1E3D99",
+    "textLink.foreground": "#00F0FF",
+    "textLink.activeForeground": "#FFB000",
+    "textPreformat.foreground": "#FFE066",
+    "textPreformat.background": "#0A1E3D80",
+    "textPreformat.border": "#00A3FF47",
+    "textSeparator.foreground": "#3C6D88",
     "editor.background": "#030712",
     "editor.foreground": "#DDF7FF",
     "editorLineNumber.foreground": "#3C6D88",
@@ -106,7 +115,7 @@
     "terminal.ansiGreen": "#39FF14",
     "terminal.ansiYellow": "#FFE066",
     "terminal.ansiBlue": "#00A3FF",
-    "terminal.ansiMagenta": "#FF2BD6",
+    "terminal.ansiMagenta": "#FFB000",
     "terminal.ansiCyan": "#00F0FF",
     "terminal.ansiWhite": "#DDF7FF",
     "terminal.ansiBrightBlack": "#3C6D88",
@@ -114,7 +123,7 @@
     "terminal.ansiBrightGreen": "#8DFF78",
     "terminal.ansiBrightYellow": "#FFF0A6",
     "terminal.ansiBrightBlue": "#62C9FF",
-    "terminal.ansiBrightMagenta": "#FF80E7",
+    "terminal.ansiBrightMagenta": "#FFD65A",
     "terminal.ansiBrightCyan": "#8BFAFF",
     "terminal.ansiBrightWhite": "#FFFFFF",
     "input.background": "#050D1C",
@@ -190,11 +199,10 @@
     "charts.foreground": "#DDF7FF",
     "charts.lines": "#3C6D88",
     "charts.red": "#FF3B6B",
-    "charts.blue": "#FF2BD6",
+    "charts.blue": "#FFB000",
     "charts.yellow": "#FFB000",
     "charts.orange": "#00A3FF",
-    "charts.green": "#39FF14",
-    "charts.purple": "#39FF14"
+    "charts.green": "#39FF14"
   },
   "tokenColors": [
     {
@@ -229,7 +237,7 @@
         "storage.type"
       ],
       "settings": {
-        "foreground": "#FF2BD6"
+        "foreground": "#FFB000"
       }
     },
     {
@@ -485,7 +493,7 @@
         "support.function.aggregate.sql"
       ],
       "settings": {
-        "foreground": "#FF2BD6",
+        "foreground": "#FFB000",
         "fontStyle": "bold"
       }
     },
@@ -547,11 +555,25 @@
       "name": "Markdown headings",
       "scope": [
         "markup.heading",
-        "markup.heading punctuation.definition.heading"
+        "markup.heading punctuation.definition.heading",
+        "markup.heading.markdown",
+        "markup.heading.setext.1.markdown",
+        "markup.heading.setext.2.markdown"
       ],
       "settings": {
         "foreground": "#00F0FF",
         "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Markdown heading markers and separators",
+      "scope": [
+        "punctuation.definition.heading.markdown",
+        "meta.separator.markdown",
+        "markup.heading.setext punctuation.definition.heading.markdown"
+      ],
+      "settings": {
+        "foreground": "#FFB000"
       }
     },
     {
@@ -560,10 +582,25 @@
         "markup.underline.link",
         "string.other.link",
         "constant.other.reference.link",
-        "meta.link.inline"
+        "meta.link.inline",
+        "markup.underline.link.markdown",
+        "meta.image.inline.markdown",
+        "meta.link.reference.def.markdown",
+        "constant.other.reference.link.markdown"
       ],
       "settings": {
-        "foreground": "#FF2BD6"
+        "foreground": "#FFB000"
+      }
+    },
+    {
+      "name": "Markdown link text and titles",
+      "scope": [
+        "string.other.link.title.markdown",
+        "string.other.link.description.markdown",
+        "markup.link"
+      ],
+      "settings": {
+        "foreground": "#A9E9FF"
       }
     },
     {
@@ -587,12 +624,25 @@
       }
     },
     {
+      "name": "Markdown strikethrough",
+      "scope": [
+        "markup.strikethrough"
+      ],
+      "settings": {
+        "foreground": "#FF3B6B"
+      }
+    },
+    {
       "name": "Markdown code and fences",
       "scope": [
         "markup.inline.raw",
         "markup.fenced_code.block",
         "markup.raw.block",
-        "punctuation.definition.raw.markdown"
+        "punctuation.definition.raw.markdown",
+        "markup.raw.inline.markdown",
+        "markup.raw.block.markdown",
+        "fenced_code.block.language",
+        "variable.language.fenced.markdown"
       ],
       "settings": {
         "foreground": "#FFE066"
@@ -603,10 +653,47 @@
       "scope": [
         "markup.quote",
         "punctuation.definition.quote",
-        "beginning.punctuation.definition.list.markdown"
+        "beginning.punctuation.definition.list.markdown",
+        "markup.list",
+        "punctuation.definition.list.begin.markdown"
       ],
       "settings": {
         "foreground": "#6AA7C8"
+      }
+    },
+    {
+      "name": "Markdown tables",
+      "scope": [
+        "markup.table",
+        "punctuation.definition.table.markdown",
+        "meta.table.markdown"
+      ],
+      "settings": {
+        "foreground": "#A9E9FF"
+      }
+    },
+    {
+      "name": "Markdown task list markers",
+      "scope": [
+        "markup.list.checked",
+        "markup.list.unnumbered",
+        "keyword.other.task",
+        "meta.task-list-item.markdown"
+      ],
+      "settings": {
+        "foreground": "#00A3FF"
+      }
+    },
+    {
+      "name": "Markdown frontmatter",
+      "scope": [
+        "meta.frontmatter.markdown",
+        "punctuation.definition.metadata.markdown",
+        "punctuation.section.frontmatter.begin",
+        "punctuation.section.frontmatter.end"
+      ],
+      "settings": {
+        "foreground": "#FFB000"
       }
     },
     {
@@ -672,8 +759,8 @@
     "method": "#00F0FF",
     "method.defaultLibrary": "#39FF14",
     "macro": "#FF3B6B",
-    "keyword": "#FF2BD6",
-    "modifier": "#FF2BD6",
+    "keyword": "#FFB000",
+    "modifier": "#FFB000",
     "comment": {
       "foreground": "#6AA7C8",
       "italic": true
@@ -685,9 +772,6 @@
     "decorator": {
       "foreground": "#FF3B6B",
       "italic": true
-    },
-    "*.declaration": {
-      "bold": true
     },
     "*.static": {
       "foreground": "#39FF14"

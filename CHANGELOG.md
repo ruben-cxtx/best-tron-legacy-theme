@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ## [1.1.0] - 2026-05-03
 
 ### Added
-- Added **Tron - Retro Grid**, a fourth retro Tron flavor with neon blue, magenta, green, and warm arcade accents.
+- Added **Tron - Retro Grid**, a fourth retro Tron flavor with neon blue, green signal, and warm arcade accents.
 - Added semantic highlighting support across all themes.
 - Added broad syntax coverage for React, Next.js, Node, NestJS, Astro, Tailwind, HTML, CSS, SQL, Markdown, YAML, Docker, Kubernetes, GitLab CI, shell, and Python.
 - Added richer workbench colors for tabs, panels, lists, settings, notifications, debug controls, Git decorations, minimap markers, breadcrumbs, peek views, and terminal ANSI colors.

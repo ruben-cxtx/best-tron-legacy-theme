@@ -13,6 +13,15 @@
     "errorForeground": "#FF5A1F",
     "icon.foreground": "#FE9C00",
     "sash.hoverBorder": "#FFB020",
+    "textBlockQuote.background": "#2C190866",
+    "textBlockQuote.border": "#FE9C00",
+    "textCodeBlock.background": "#2C190899",
+    "textLink.foreground": "#FFB020",
+    "textLink.activeForeground": "#FF6A00",
+    "textPreformat.foreground": "#FFFFFF",
+    "textPreformat.background": "#2C190880",
+    "textPreformat.border": "#FE9C0047",
+    "textSeparator.foreground": "#80623B",
     "editor.background": "#120B05",
     "editor.foreground": "#FFE8C1",
     "editorLineNumber.foreground": "#80623B",
@@ -193,8 +202,7 @@
     "charts.blue": "#FF6A00",
     "charts.yellow": "#FFE08A",
     "charts.orange": "#FE9C00",
-    "charts.green": "#FFB020",
-    "charts.purple": "#FFCB6B"
+    "charts.green": "#FFB020"
   },
   "tokenColors": [
     {
@@ -547,11 +555,25 @@
       "name": "Markdown headings",
       "scope": [
         "markup.heading",
-        "markup.heading punctuation.definition.heading"
+        "markup.heading punctuation.definition.heading",
+        "markup.heading.markdown",
+        "markup.heading.setext.1.markdown",
+        "markup.heading.setext.2.markdown"
       ],
       "settings": {
         "foreground": "#FFB020",
         "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Markdown heading markers and separators",
+      "scope": [
+        "punctuation.definition.heading.markdown",
+        "meta.separator.markdown",
+        "markup.heading.setext punctuation.definition.heading.markdown"
+      ],
+      "settings": {
+        "foreground": "#FFE08A"
       }
     },
     {
@@ -560,10 +582,25 @@
         "markup.underline.link",
         "string.other.link",
         "constant.other.reference.link",
-        "meta.link.inline"
+        "meta.link.inline",
+        "markup.underline.link.markdown",
+        "meta.image.inline.markdown",
+        "meta.link.reference.def.markdown",
+        "constant.other.reference.link.markdown"
       ],
       "settings": {
         "foreground": "#FF6A00"
+      }
+    },
+    {
+      "name": "Markdown link text and titles",
+      "scope": [
+        "string.other.link.title.markdown",
+        "string.other.link.description.markdown",
+        "markup.link"
+      ],
+      "settings": {
+        "foreground": "#FFD99C"
       }
     },
     {
@@ -587,12 +624,25 @@
       }
     },
     {
+      "name": "Markdown strikethrough",
+      "scope": [
+        "markup.strikethrough"
+      ],
+      "settings": {
+        "foreground": "#FF5A1F"
+      }
+    },
+    {
       "name": "Markdown code and fences",
       "scope": [
         "markup.inline.raw",
         "markup.fenced_code.block",
         "markup.raw.block",
-        "punctuation.definition.raw.markdown"
+        "punctuation.definition.raw.markdown",
+        "markup.raw.inline.markdown",
+        "markup.raw.block.markdown",
+        "fenced_code.block.language",
+        "variable.language.fenced.markdown"
       ],
       "settings": {
         "foreground": "#FFFFFF"
@@ -603,10 +653,47 @@
       "scope": [
         "markup.quote",
         "punctuation.definition.quote",
-        "beginning.punctuation.definition.list.markdown"
+        "beginning.punctuation.definition.list.markdown",
+        "markup.list",
+        "punctuation.definition.list.begin.markdown"
       ],
       "settings": {
         "foreground": "#C59055"
+      }
+    },
+    {
+      "name": "Markdown tables",
+      "scope": [
+        "markup.table",
+        "punctuation.definition.table.markdown",
+        "meta.table.markdown"
+      ],
+      "settings": {
+        "foreground": "#FFD99C"
+      }
+    },
+    {
+      "name": "Markdown task list markers",
+      "scope": [
+        "markup.list.checked",
+        "markup.list.unnumbered",
+        "keyword.other.task",
+        "meta.task-list-item.markdown"
+      ],
+      "settings": {
+        "foreground": "#FE9C00"
+      }
+    },
+    {
+      "name": "Markdown frontmatter",
+      "scope": [
+        "meta.frontmatter.markdown",
+        "punctuation.definition.metadata.markdown",
+        "punctuation.section.frontmatter.begin",
+        "punctuation.section.frontmatter.end"
+      ],
+      "settings": {
+        "foreground": "#FFE08A"
       }
     },
     {
@@ -685,9 +772,6 @@
     "decorator": {
       "foreground": "#FF5A1F",
       "italic": true
-    },
-    "*.declaration": {
-      "bold": true
     },
     "*.static": {
       "foreground": "#FFCB6B"

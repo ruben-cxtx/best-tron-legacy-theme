@@ -22,7 +22,8 @@ const palettes = [
     accent: "#6FC3DF",
     accentBright: "#00F5FF",
     accentAlt: "#2D7DFF",
-    secondary: "#B7A7FF",
+    keyword: "#B892FF",
+    secondary: "#9BE8FF",
     tertiary: "#8DFFB3",
     success: "#8DFFB3",
     warm: "#FFC777",
@@ -35,7 +36,7 @@ const palettes = [
       green: "#8DFFB3",
       yellow: "#FFC777",
       blue: "#2D7DFF",
-      magenta: "#B7A7FF",
+      magenta: "#FF9F7A",
       cyan: "#00F5FF",
       white: "#D8FBFF",
       brightBlack: "#3E7482",
@@ -43,7 +44,7 @@ const palettes = [
       brightGreen: "#B8FFD0",
       brightYellow: "#FFE2A6",
       brightBlue: "#75A7FF",
-      brightMagenta: "#D4CAFF",
+      brightMagenta: "#FFC3A8",
       brightCyan: "#9BFBFF",
       brightWhite: "#FFFFFF"
     }
@@ -65,6 +66,7 @@ const palettes = [
     accent: "#FF2D45",
     accentBright: "#FF4D6D",
     accentAlt: "#FF6A3D",
+    keyword: "#FF6A3D",
     secondary: "#FF9A62",
     tertiary: "#FFD166",
     success: "#FF8F70",
@@ -108,6 +110,7 @@ const palettes = [
     accent: "#FE9C00",
     accentBright: "#FFB020",
     accentAlt: "#FF6A00",
+    keyword: "#FF6A00",
     secondary: "#FFCB6B",
     tertiary: "#FFFFFF",
     success: "#FFB020",
@@ -150,7 +153,8 @@ const palettes = [
     mutedDeep: "#3C6D88",
     accent: "#00A3FF",
     accentBright: "#00F0FF",
-    accentAlt: "#FF2BD6",
+    accentAlt: "#FFB000",
+    keyword: "#FFB000",
     secondary: "#39FF14",
     tertiary: "#FFE066",
     success: "#39FF14",
@@ -164,7 +168,7 @@ const palettes = [
       green: "#39FF14",
       yellow: "#FFE066",
       blue: "#00A3FF",
-      magenta: "#FF2BD6",
+      magenta: "#FFB000",
       cyan: "#00F0FF",
       white: "#DDF7FF",
       brightBlack: "#3C6D88",
@@ -172,7 +176,7 @@ const palettes = [
       brightGreen: "#8DFF78",
       brightYellow: "#FFF0A6",
       brightBlue: "#62C9FF",
-      brightMagenta: "#FF80E7",
+      brightMagenta: "#FFD65A",
       brightCyan: "#8BFAFF",
       brightWhite: "#FFFFFF"
     }
@@ -196,6 +200,15 @@ function makeWorkbench(p) {
     "errorForeground": p.danger,
     "icon.foreground": p.accent,
     "sash.hoverBorder": p.accentBright,
+    "textBlockQuote.background": alpha(p.panelAlt, 0.4),
+    "textBlockQuote.border": p.accent,
+    "textCodeBlock.background": alpha(p.panelAlt, 0.6),
+    "textLink.foreground": p.accentBright,
+    "textLink.activeForeground": p.accentAlt,
+    "textPreformat.foreground": p.tertiary,
+    "textPreformat.background": alpha(p.panelAlt, 0.5),
+    "textPreformat.border": alpha(p.accent, 0.28),
+    "textSeparator.foreground": p.mutedDeep,
 
     "editor.background": p.bg,
     "editor.foreground": p.fg,
@@ -394,8 +407,7 @@ function makeWorkbench(p) {
     "charts.blue": p.accentAlt,
     "charts.yellow": p.warm,
     "charts.orange": p.accent,
-    "charts.green": p.success,
-    "charts.purple": p.secondary
+    "charts.green": p.success
   };
 }
 
@@ -406,6 +418,7 @@ function rule(name, scope, foreground, fontStyle = "") {
 }
 
 function makeTokenColors(p) {
+  const keyword = p.keyword || p.accentAlt;
   return [
     rule("Comments - subdued program notes", ["comment", "punctuation.definition.comment"], p.muted, "italic"),
     rule("Documentation comments", [
@@ -418,7 +431,7 @@ function makeTokenColors(p) {
       "keyword.operator.expression",
       "storage.modifier",
       "storage.type"
-    ], p.accentAlt),
+    ], keyword),
     rule("Module boundaries", [
       "keyword.control.import",
       "keyword.control.export",
@@ -558,7 +571,7 @@ function makeTokenColors(p) {
       "keyword.other.sql",
       "storage.type.sql",
       "support.function.aggregate.sql"
-    ], p.accentAlt, "bold"),
+    ], keyword, "bold"),
     rule("SQL tables, columns, and symbols", [
       "entity.name.function.sql",
       "entity.name.type.sql",
@@ -591,27 +604,68 @@ function makeTokenColors(p) {
     ], p.fgSoft),
     rule("Markdown headings", [
       "markup.heading",
-      "markup.heading punctuation.definition.heading"
+      "markup.heading punctuation.definition.heading",
+      "markup.heading.markdown",
+      "markup.heading.setext.1.markdown",
+      "markup.heading.setext.2.markdown"
     ], p.accentBright, "bold"),
+    rule("Markdown heading markers and separators", [
+      "punctuation.definition.heading.markdown",
+      "meta.separator.markdown",
+      "markup.heading.setext punctuation.definition.heading.markdown"
+    ], p.warm),
     rule("Markdown links and references", [
       "markup.underline.link",
       "string.other.link",
       "constant.other.reference.link",
-      "meta.link.inline"
+      "meta.link.inline",
+      "markup.underline.link.markdown",
+      "meta.image.inline.markdown",
+      "meta.link.reference.def.markdown",
+      "constant.other.reference.link.markdown"
     ], p.accentAlt),
+    rule("Markdown link text and titles", [
+      "string.other.link.title.markdown",
+      "string.other.link.description.markdown",
+      "markup.link"
+    ], p.fgSoft),
     rule("Markdown emphasis", ["markup.italic"], p.fgSoft, "italic"),
     rule("Markdown strong", ["markup.bold"], p.warm, "bold"),
+    rule("Markdown strikethrough", ["markup.strikethrough"], p.danger),
     rule("Markdown code and fences", [
       "markup.inline.raw",
       "markup.fenced_code.block",
       "markup.raw.block",
-      "punctuation.definition.raw.markdown"
+      "punctuation.definition.raw.markdown",
+      "markup.raw.inline.markdown",
+      "markup.raw.block.markdown",
+      "fenced_code.block.language",
+      "variable.language.fenced.markdown"
     ], p.tertiary),
     rule("Markdown quotes and lists", [
       "markup.quote",
       "punctuation.definition.quote",
-      "beginning.punctuation.definition.list.markdown"
+      "beginning.punctuation.definition.list.markdown",
+      "markup.list",
+      "punctuation.definition.list.begin.markdown"
     ], p.muted),
+    rule("Markdown tables", [
+      "markup.table",
+      "punctuation.definition.table.markdown",
+      "meta.table.markdown"
+    ], p.fgSoft),
+    rule("Markdown task list markers", [
+      "markup.list.checked",
+      "markup.list.unnumbered",
+      "keyword.other.task",
+      "meta.task-list-item.markdown"
+    ], p.accent),
+    rule("Markdown frontmatter", [
+      "meta.frontmatter.markdown",
+      "punctuation.definition.metadata.markdown",
+      "punctuation.section.frontmatter.begin",
+      "punctuation.section.frontmatter.end"
+    ], p.warm),
     rule("Diff inserted", ["markup.inserted"], p.tertiary),
     rule("Diff deleted", ["markup.deleted"], p.danger),
     rule("Diff changed", ["markup.changed"], p.warm),
@@ -624,6 +678,7 @@ function makeTokenColors(p) {
 }
 
 function makeSemanticTokenColors(p) {
+  const keyword = p.keyword || p.accentAlt;
   return {
     "namespace": p.accent,
     "type": p.warm,
@@ -647,15 +702,14 @@ function makeSemanticTokenColors(p) {
     "method": p.accentBright,
     "method.defaultLibrary": p.secondary,
     "macro": p.danger,
-    "keyword": p.accentAlt,
-    "modifier": p.accentAlt,
+    "keyword": keyword,
+    "modifier": keyword,
     "comment": { foreground: p.muted, italic: true },
     "string": p.tertiary,
     "number": p.warm,
     "regexp": p.danger,
     "operator": p.fgSoft,
     "decorator": { foreground: p.danger, italic: true },
-    "*.declaration": { bold: true },
     "*.static": { foreground: p.secondary },
     "*.async": { foreground: p.accentBright, italic: true },
     "*.deprecated": { foreground: p.mutedDeep, underline: true },
