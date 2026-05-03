@@ -311,6 +311,10 @@ function makeWorkbench(p) {
     "editorOverviewRuler.errorForeground": p.danger,
     "editorOverviewRuler.warningForeground": p.warm,
     "editorOverviewRuler.infoForeground": p.accent,
+    "editorMarkerNavigation.background": p.panel,
+    "editorMarkerNavigationError.background": p.danger,
+    "editorMarkerNavigationWarning.background": p.warm,
+    "editorMarkerNavigationInfo.background": p.accent,
 
     "activityBar.background": p.bgDeep,
     "activityBar.foreground": p.fg,
@@ -337,6 +341,8 @@ function makeWorkbench(p) {
     "list.inactiveSelectionForeground": p.fgSoft,
     "list.inactiveSelectionIconForeground": p.accent,
     "list.highlightForeground": p.accentBright,
+    "list.errorForeground": p.danger,
+    "list.warningForeground": p.warm,
     "tree.indentGuidesStroke": alpha(p.accent, 0.28),
 
     "tab.activeBackground": p.bg,
@@ -370,6 +376,9 @@ function makeWorkbench(p) {
     "panelTitle.activeBorder": p.accentBright,
     "panelTitle.activeForeground": p.fg,
     "panelTitle.inactiveForeground": p.muted,
+    "problemsErrorIcon.foreground": p.danger,
+    "problemsWarningIcon.foreground": p.warm,
+    "problemsInfoIcon.foreground": p.accent,
 
     "terminal.background": p.bg,
     "terminal.foreground": p.fg,
