@@ -251,22 +251,22 @@
     "symbolIcon.enumeratorForeground": "#FFC777",
     "symbolIcon.enumeratorMemberForeground": "#9BE8FF",
     "symbolIcon.eventForeground": "#FF6E7A",
-    "symbolIcon.fieldForeground": "#A9E6F0",
+    "symbolIcon.fieldForeground": "#FFD08A",
     "symbolIcon.fileForeground": "#D8FBFF",
     "symbolIcon.folderForeground": "#6FC3DF",
     "symbolIcon.functionForeground": "#00F5FF",
     "symbolIcon.interfaceForeground": "#FFC777",
-    "symbolIcon.keyForeground": "#A9E6F0",
+    "symbolIcon.keyForeground": "#FFD08A",
     "symbolIcon.keywordForeground": "#B892FF",
     "symbolIcon.methodForeground": "#00F5FF",
     "symbolIcon.moduleForeground": "#6FC3DF",
     "symbolIcon.namespaceForeground": "#6FC3DF",
     "symbolIcon.nullForeground": "#9BE8FF",
     "symbolIcon.numberForeground": "#FFC777",
-    "symbolIcon.objectForeground": "#A9E6F0",
+    "symbolIcon.objectForeground": "#FFD08A",
     "symbolIcon.operatorForeground": "#A9E6F0",
     "symbolIcon.packageForeground": "#6FC3DF",
-    "symbolIcon.propertyForeground": "#A9E6F0",
+    "symbolIcon.propertyForeground": "#FFD08A",
     "symbolIcon.referenceForeground": "#2D7DFF",
     "symbolIcon.snippetForeground": "#8DFFB3",
     "symbolIcon.stringForeground": "#8DFFB3",
@@ -537,7 +537,7 @@
         "entity.name.section"
       ],
       "settings": {
-        "foreground": "#A9E6F0"
+        "foreground": "#FFD08A"
       }
     },
     {
@@ -674,8 +674,7 @@
         "support.function.aggregate.sql"
       ],
       "settings": {
-        "foreground": "#B892FF",
-        "fontStyle": "bold"
+        "foreground": "#B892FF"
       }
     },
     {
@@ -761,8 +760,7 @@
         "markup.heading.setext.2.markdown"
       ],
       "settings": {
-        "foreground": "#00F5FF",
-        "fontStyle": "bold"
+        "foreground": "#00F5FF"
       }
     },
     {
@@ -819,8 +817,7 @@
         "markup.bold"
       ],
       "settings": {
-        "foreground": "#FFC777",
-        "fontStyle": "bold"
+        "foreground": "#FFC777"
       }
     },
     {
@@ -951,7 +948,7 @@
     "variable": "#D8FBFF",
     "variable.readonly": "#9BE8FF",
     "variable.defaultLibrary": "#9BE8FF",
-    "property": "#A9E6F0",
+    "property": "#FFD08A",
     "property.readonly": "#9BE8FF",
     "enumMember": "#9BE8FF",
     "event": "#FF6E7A",

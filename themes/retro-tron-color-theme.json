@@ -251,22 +251,22 @@
     "symbolIcon.enumeratorForeground": "#FFB000",
     "symbolIcon.enumeratorMemberForeground": "#39FF14",
     "symbolIcon.eventForeground": "#FF3B6B",
-    "symbolIcon.fieldForeground": "#A9E9FF",
+    "symbolIcon.fieldForeground": "#62C9FF",
     "symbolIcon.fileForeground": "#DDF7FF",
     "symbolIcon.folderForeground": "#00A3FF",
     "symbolIcon.functionForeground": "#00F0FF",
     "symbolIcon.interfaceForeground": "#FFB000",
-    "symbolIcon.keyForeground": "#A9E9FF",
+    "symbolIcon.keyForeground": "#62C9FF",
     "symbolIcon.keywordForeground": "#FFB000",
     "symbolIcon.methodForeground": "#00F0FF",
     "symbolIcon.moduleForeground": "#00A3FF",
     "symbolIcon.namespaceForeground": "#00A3FF",
     "symbolIcon.nullForeground": "#39FF14",
     "symbolIcon.numberForeground": "#FFB000",
-    "symbolIcon.objectForeground": "#A9E9FF",
+    "symbolIcon.objectForeground": "#62C9FF",
     "symbolIcon.operatorForeground": "#A9E9FF",
     "symbolIcon.packageForeground": "#00A3FF",
-    "symbolIcon.propertyForeground": "#A9E9FF",
+    "symbolIcon.propertyForeground": "#62C9FF",
     "symbolIcon.referenceForeground": "#FFB000",
     "symbolIcon.snippetForeground": "#FFE066",
     "symbolIcon.stringForeground": "#FFE066",
@@ -537,7 +537,7 @@
         "entity.name.section"
       ],
       "settings": {
-        "foreground": "#A9E9FF"
+        "foreground": "#62C9FF"
       }
     },
     {
@@ -951,7 +951,7 @@
     "variable": "#DDF7FF",
     "variable.readonly": "#39FF14",
     "variable.defaultLibrary": "#39FF14",
-    "property": "#A9E9FF",
+    "property": "#62C9FF",
     "property.readonly": "#39FF14",
     "enumMember": "#39FF14",
     "event": "#FF3B6B",

@@ -9,6 +9,7 @@ const palettes = [
     file: "themes/encom-tron-legacy-color-theme.json",
     name: "Encom Tron Legacy",
     uiLabel: "Tron Legacy - Encom",
+    noBold: true,
     bg: "#061016",
     bgDeep: "#02090D",
     bgSoft: "#0A1B24",
@@ -23,6 +24,8 @@ const palettes = [
     accentBright: "#00F5FF",
     accentAlt: "#2D7DFF",
     keyword: "#B892FF",
+    property: "#FFD08A",
+    propertyReadonly: "#9BE8FF",
     secondary: "#9BE8FF",
     tertiary: "#8DFFB3",
     success: "#8DFFB3",
@@ -68,6 +71,8 @@ const palettes = [
     accentBright: "#00F5FF",
     accentAlt: "#2D7DFF",
     keyword: "#B892FF",
+    property: "#7AD9E8",
+    propertyReadonly: "#9BE8FF",
     secondary: "#9BE8FF",
     tertiary: "#8DFFB3",
     success: "#8DFFB3",
@@ -112,6 +117,8 @@ const palettes = [
     accentBright: "#FF4D6D",
     accentAlt: "#FF6A3D",
     keyword: "#FF6A3D",
+    property: "#FFB0A1",
+    propertyReadonly: "#FF9A62",
     secondary: "#FF9A62",
     tertiary: "#FFD166",
     success: "#FF8F70",
@@ -156,6 +163,8 @@ const palettes = [
     accentBright: "#FFB020",
     accentAlt: "#FF6A00",
     keyword: "#FF6A00",
+    property: "#FFC65A",
+    propertyReadonly: "#FFCB6B",
     secondary: "#FFCB6B",
     tertiary: "#FFFFFF",
     success: "#FFB020",
@@ -200,6 +209,8 @@ const palettes = [
     accentBright: "#00F0FF",
     accentAlt: "#FFB000",
     keyword: "#FFB000",
+    property: "#62C9FF",
+    propertyReadonly: "#39FF14",
     secondary: "#39FF14",
     tertiary: "#FFE066",
     success: "#39FF14",
@@ -503,22 +514,22 @@ function makeWorkbench(p) {
     "symbolIcon.enumeratorForeground": p.warm,
     "symbolIcon.enumeratorMemberForeground": p.secondary,
     "symbolIcon.eventForeground": p.danger,
-    "symbolIcon.fieldForeground": p.fgSoft,
+    "symbolIcon.fieldForeground": p.property || p.fgSoft,
     "symbolIcon.fileForeground": p.fg,
     "symbolIcon.folderForeground": p.accent,
     "symbolIcon.functionForeground": p.accentBright,
     "symbolIcon.interfaceForeground": p.warm,
-    "symbolIcon.keyForeground": p.fgSoft,
+    "symbolIcon.keyForeground": p.property || p.fgSoft,
     "symbolIcon.keywordForeground": p.keyword || p.accentAlt,
     "symbolIcon.methodForeground": p.accentBright,
     "symbolIcon.moduleForeground": p.accent,
     "symbolIcon.namespaceForeground": p.accent,
     "symbolIcon.nullForeground": p.secondary,
     "symbolIcon.numberForeground": p.warm,
-    "symbolIcon.objectForeground": p.fgSoft,
+    "symbolIcon.objectForeground": p.property || p.fgSoft,
     "symbolIcon.operatorForeground": p.fgSoft,
     "symbolIcon.packageForeground": p.accent,
-    "symbolIcon.propertyForeground": p.fgSoft,
+    "symbolIcon.propertyForeground": p.property || p.fgSoft,
     "symbolIcon.referenceForeground": p.accentAlt,
     "symbolIcon.snippetForeground": p.tertiary,
     "symbolIcon.stringForeground": p.tertiary,
@@ -546,6 +557,7 @@ function rule(name, scope, foreground, fontStyle = "") {
 
 function makeTokenColors(p) {
   const keyword = p.keyword || p.accentAlt;
+  const property = p.property || p.fgSoft;
   return [
     rule("Comments - subdued program notes", ["comment", "punctuation.definition.comment"], p.muted, "italic"),
     rule("Documentation comments", [
@@ -689,7 +701,7 @@ function makeTokenColors(p) {
       "meta.property.object",
       "entity.name.tag.yaml",
       "entity.name.section"
-    ], p.fgSoft),
+    ], property),
     rule("Decorators and annotations", [
       "meta.decorator",
       "punctuation.decorator",
@@ -886,6 +898,8 @@ function makeTokenColors(p) {
 
 function makeSemanticTokenColors(p) {
   const keyword = p.keyword || p.accentAlt;
+  const property = p.property || p.fgSoft;
+  const propertyReadonly = p.propertyReadonly || p.secondary;
   return {
     "namespace": p.accent,
     "type": p.warm,
@@ -900,8 +914,8 @@ function makeSemanticTokenColors(p) {
     "variable": p.fg,
     "variable.readonly": p.secondary,
     "variable.defaultLibrary": p.secondary,
-    "property": p.fgSoft,
-    "property.readonly": p.secondary,
+    "property": property,
+    "property.readonly": propertyReadonly,
     "enumMember": p.secondary,
     "event": p.danger,
     "function": p.accentBright,
@@ -922,12 +936,32 @@ function makeSemanticTokenColors(p) {
     "*.deprecated": { foreground: p.mutedDeep, underline: true },
     "variable.readonly:javascript": p.secondary,
     "variable.readonly:typescript": p.secondary,
-    "property.readonly:javascript": p.secondary,
-    "property.readonly:typescript": p.secondary,
+    "property.readonly:javascript": propertyReadonly,
+    "property.readonly:typescript": propertyReadonly,
     "function:python": p.accentBright,
     "parameter:python": p.fgSoft,
     "class:python": p.warm
   };
+}
+
+function removeBoldStyles(theme) {
+  for (const token of theme.tokenColors) {
+    const fontStyle = token.settings && token.settings.fontStyle;
+    if (!fontStyle) continue;
+    const next = fontStyle
+      .split(/\s+/)
+      .filter((style) => style && style !== "bold")
+      .join(" ");
+    if (next) {
+      token.settings.fontStyle = next;
+    } else {
+      delete token.settings.fontStyle;
+    }
+  }
+
+  for (const value of Object.values(theme.semanticTokenColors)) {
+    if (value && typeof value === "object" && value.bold) delete value.bold;
+  }
 }
 
 function removeItalicStyles(theme) {
@@ -959,6 +993,7 @@ function themeFor(p) {
     tokenColors: makeTokenColors(p),
     semanticTokenColors: makeSemanticTokenColors(p)
   };
+  if (p.noBold) removeBoldStyles(theme);
   if (p.noItalics) removeItalicStyles(theme);
   return theme;
 }

@@ -82,3 +82,58 @@ export function ProgramPanel(props: ComponentProps<"section">) {
     </section>
   );
 }
+
+type CartAction =
+  | { type: "ADD_ITEM"; payload: string }
+  | { type: "REMOVE_ITEM"; payload: string };
+
+interface CartItem {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+}
+
+interface CartState {
+  items: CartItem[];
+}
+
+const DUMMY_PRODUCTS = [
+  { id: "disc", title: "Identity Disc", price: 99 },
+  { id: "cycle", title: "Light Cycle", price: 799 }
+];
+
+export function shoppingCartReducer(state: CartState, action: CartAction): CartState {
+  if (action.type === "ADD_ITEM") {
+    const updatedItems = [...state.items];
+    const existingCartItemIndex = updatedItems.findIndex(
+      (cartItem) => cartItem.id === action.payload
+    );
+    const existingCartItem = updatedItems[existingCartItemIndex];
+
+    if (existingCartItem) {
+      const updatedItem = {
+        ...existingCartItem,
+        quantity: existingCartItem.quantity + 1
+      };
+      updatedItems[existingCartItemIndex] = updatedItem;
+    } else {
+      const product = DUMMY_PRODUCTS.find(
+        (program) => program.id === action.payload
+      );
+
+      if (!product) return state;
+
+      updatedItems.push({
+        id: action.payload,
+        name: product.title,
+        price: product.price,
+        quantity: 1
+      });
+    }
+
+    return { items: updatedItems };
+  }
+
+  return state;
+}
