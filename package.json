@@ -1,18 +1,18 @@
 {
   "name": "encom-tron-legacy",
   "displayName": "Troning - Tron Legacy Theme Pack",
-  "description": "A VSCode theme pack inspired by the Tron Legacy movie, featuring Encom, Ares, and CLU color themes.",
-  "version": "1.0.0",
+  "description": "A VS Code theme pack inspired by the Tron universe, tuned for full-stack, AI, backend, and frontend development.",
+  "version": "1.1.0",
   "publisher": "rubenzn",
   "icon": "screenshots/icon.png",
   "galleryBanner": {
-  "color": "#000000",
-  "theme": "dark",
+    "color": "#000000",
+    "theme": "dark"
+  },
   "sponsor": {
     "name": "Buy me a coffee",
     "url": "https://buymeacoffee.com/rubenzn"
-  }
-},
+  },
 
   "engines": {
     "vscode": "^1.109.0"
@@ -29,12 +29,30 @@
     "orange",
     "neon",
     "cyberpunk",
+    "retro",
     "encom",
     "ares",
     "clu",
+    "semantic highlighting",
+    "react",
+    "nextjs",
+    "node",
+    "nestjs",
+    "python",
+    "tailwind",
+    "astro",
+    "sql",
+    "docker",
+    "kubernetes",
+    "gitlab",
+    "ci",
     "movie",
     "sci-fi"
   ],
+  "scripts": {
+    "build": "node scripts/build-themes.js",
+    "check": "node scripts/build-themes.js --check"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ruben-cxtx/best-tron-legacy-theme.git"
@@ -60,6 +78,11 @@
         "label": "Tron Legacy - CLU",
         "uiTheme": "vs-dark",
         "path": "./themes/clu-tron-legacy-theme.json"
+      },
+      {
+        "label": "Tron - Retro Grid",
+        "uiTheme": "vs-dark",
+        "path": "./themes/retro-tron-color-theme.json"
       }
     ]
   }
